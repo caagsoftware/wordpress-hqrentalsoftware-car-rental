@@ -14,7 +14,7 @@ function hq_carrental_reservation_form($atts)
     $return_date_label = hq_carrental_set_variable( $atts['return_date_label'] );
     $return_date_placeholder = hq_carrental_set_variable( $atts['return_date_placeholder'] );
     $button_text = hq_carrental_set_variable( $atts['button_text'] );
-    //$locations = caag_hq_get_locations_for_display();
+    $locations = caag_hq_get_locations_for_display();
     ?>
     <form action="<?php echo $reservation_page; ?>" method="post" name="car-select-form" id="car-select-form">
         <div class="alert alert-danger hidden" id="car-select-form-msg">
@@ -35,6 +35,9 @@ function hq_carrental_reservation_form($atts)
                 <div class="styled-select-car pickuplocation">
                     <select name="pick_up_location" id="pick-up-location">
                         <option value=""><?php echo $pick_up_location_placeholder; ?></option>
+                        <?php foreach ($locations as $location): ?>
+                            <option value="<?php echo $location->id; ?>"><?php echo $location->name; ?></option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
             </div>
@@ -44,7 +47,10 @@ function hq_carrental_reservation_form($atts)
                 <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span><?php echo $return_location_label; ?></span>
                 <div class="styled-select-car pickuplocation">
                     <select name="drop-off-location" id="drop-off-location">
-                        <option value="Santa Monica - 2102 Lincoln Blvd"><?php echo $return_location_placeholder; ?></option>
+                        <option value=""><?php echo $return_location_placeholder; ?></option>
+                        <?php foreach ($locations as $location): ?>
+                            <option value="<?php echo $location->id; ?>"><?php echo $location->name; ?></option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
             </div>
