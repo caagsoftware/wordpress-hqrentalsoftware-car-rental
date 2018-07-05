@@ -187,6 +187,7 @@ function hq_carrental_reservation_form($atts)
     <!--Begin Solve Problem with Unclosed Divs Tags-->
     </div>
     </div>
+    </div>
     <!--End Solve Problem with Unclosed Divs Tags-->
     <?php
 }
