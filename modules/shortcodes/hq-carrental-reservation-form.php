@@ -14,6 +14,7 @@ function hq_carrental_reservation_form($atts)
     $return_date_label = hq_carrental_set_variable( $atts['return_date_label'] );
     $return_date_placeholder = hq_carrental_set_variable( $atts['return_date_placeholder'] );
     $button_text = hq_carrental_set_variable( $atts['button_text'] );
+    //$locations = caag_hq_get_locations_for_display();
     ?>
     <form action="<?php echo $reservation_page; ?>" method="post" name="car-select-form" id="car-select-form">
         <div class="alert alert-danger hidden" id="car-select-form-msg">
@@ -183,6 +184,10 @@ function hq_carrental_reservation_form($atts)
         <!-- Drop-off date/time end -->
         <input type="submit" class="submit" name="submit" value="<?php echo $button_text; ?>" id="checkoutModalLabel">
     </form>
+    <!--Begin Solve Problem with Unclosed Divs Tags-->
+    </div>
+    </div>
+    <!--End Solve Problem with Unclosed Divs Tags-->
     <?php
 }
 
