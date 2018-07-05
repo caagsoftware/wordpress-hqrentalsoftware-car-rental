@@ -7,7 +7,7 @@ function hq_carrental_contact_form( $atts )
     $action = hq_carrental_set_variable($atts['action']);
     $contact_info = hq_carrental_set_variable($atts['contact_info']);
     $address_tag = hq_carrental_set_variable($atts['address_tag']);
-    $address_info = hq_carrental_set_variable($atts['contact_info']);
+    $address_info = hq_carrental_set_variable($atts['address_info']);
     $name_field_placeholder = hq_carrental_set_variable($atts['name_field_placeholder']);
     $name_field_name = hq_carrental_set_variable($atts['name_field_name']);
     $last_name_field_placeholder = hq_carrental_set_variable($atts['last_name_field_placeholder']);
@@ -22,7 +22,7 @@ function hq_carrental_contact_form( $atts )
     ?>
     <div class="fw-main-row">
         <div class="fw-col-inner">
-            <div class="fw-heading fw-heading-h1    wow fadeIn animated animated" data-wow-offset="120"
+            <div class="fw-heading fw-heading-h1 wow fadeIn animated animated" data-wow-offset="120"
                  data-wow-duration="1.5s"
                  style="visibility: visible; animation-duration: 1.5s; animation-name: fadeIn;">
                 <div class="fw-special-title-half">
@@ -33,7 +33,7 @@ function hq_carrental_contact_form( $atts )
                 <div class="fw-row wrap-forms wrap-contact-forms wow rollIn animated contact-form animated"
                      data-wow-offset="10" data-wow-duration="1.55s"
                      style="visibility: visible; animation-duration: 1.55s; animation-name: rollIn;">
-                    <form data-fw-form-id="fw_form" method="post" action="<?php echo $action; ?>" class="fw_form_fw_form"
+                    <form method="post" action="<?php echo $action; ?>" class="fw_form_fw_form"
                           data-fw-ext-forms-type="contact-forms">
                         <div class="fw-row">
                             <div class="fw-contact-heading wow fadeIn animated animated" data-wow-offset="120"
